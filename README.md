@@ -1,0 +1,3 @@
+# PNWScala
+
+This is the code for the PNWScala website. It's just raw code, at the moment. We should probably use a static site generator at some point. One day....
