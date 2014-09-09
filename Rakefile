@@ -1,8 +1,18 @@
+DIR = File.dirname(__FILE__)
+
 desc "Deploy the website"
 task :deploy do
-  dir = File.dirname(__FILE__)
-  print "Deploying contents of #{dir}/src/site/ to s3://pnwscala.org"
-  system "s3cmd sync #{dir}/src/site/ s3://pnwscala.org"
+  print "Deploying contents of #{DIR}/src/site/ to s3://pnwscala.org"
+  system "s3cmd sync #{DIR}/src/site/ s3://pnwscala.org"
 end
 
-task :default => 'deploy'
+desc "Serve the website using a local Python server"
+task :serve do
+  print "Serving the site from #{DIR}/src/site/\n"
+  print "  use ctrl-C to stop\n"
+  Dir.chdir("src/site") do
+    system "python -m SimpleHTTPServer"
+  end
+end
+
+task :default => 'serve'
