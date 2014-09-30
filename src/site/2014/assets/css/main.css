@@ -670,59 +670,65 @@ fieldset[disabled] .btn-link:focus {
 /************************************************
 *** schedule ***
 ************************************************/
-.schedule {
+.talks {
   padding: 60px 0;
 }
-.schedule .section-heading {
+.talks .section-heading {
   text-align: center;
   margin-bottom: 60px;
 }
-.schedule .section-heading h1 {
+.talks .section-heading h1 {
   margin-top: 0;
 }
-.schedule .nav-tabs {
+.talks .nav-tabs {
   font-size: 18px;
 }
-.schedule .nav-tabs.nav-justified > li a {
+.talks .nav-tabs.nav-justified > li a {
   border: 1px solid transparent;
   color: #999999;
 }
-.schedule .nav-tabs.nav-justified > li a:hover {
+.talks .nav-tabs.nav-justified > li a:hover {
   color: #3c3c3c;
 }
-.schedule .nav-tabs.nav-justified > li.active > a,
-.schedule .nav-tabs.nav-justified > li.active > a:hover,
-.schedule .nav-tabs.nav-justified > li.active > a:focus {
+.talks .nav-tabs.nav-justified > li.active > a,
+.talks .nav-tabs.nav-justified > li.active > a:hover,
+.talks .nav-tabs.nav-justified > li.active > a:focus {
   color: #555555;
   background-color: #eeeeee;
   border: 1px solid #eeeeee;
   border-bottom-color: transparent;
   cursor: default;
 }
-.schedule .tab-content {
+.talks .tab-content {
   padding: 20px;
   border: 1px solid #eeeeee;
   border-width: 0 1px 1px;
   background-color: #eeeeee;
 }
-.schedule .tab-content h4 {
+.talks .tab-content h4 {
   margin: 10px 0;
 }
-.schedule .panel-group {
+.talks .panel-group {
   margin-bottom: 0;
 }
-.schedule .panel-title > a {
+.talks .panel-title {
   display: block;
   text-decoration: none;
   text-align: center;
   color: #999999;
 }
-.schedule .panel-default {
+.talks h5 {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #777777;
+}
+.talks .panel-default {
   border-color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.schedule .panel-default > .panel-heading {
+.talks .panel-default > .panel-heading {
   background-color: #ffffff;
 }
 /************************************************
@@ -1015,6 +1021,15 @@ fieldset[disabled] .btn-link:focus {
   padding: 7px 12px;
   border: 1px solid #ffffff;
   text-decoration: none;
+}
+/************************************************
+*** speakers ***
+************************************************/
+.speakers {
+    background: #eeeeee;
+}
+.speakers hr {
+    border-top-color: #555555;
 }
 /************************************************
 *** registration ***

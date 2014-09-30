@@ -21,6 +21,8 @@
       <link rel="stylesheet" type="text/css" href="bootstrap-3.1.1/css/bootstrap.css">
       <!-- ///  main CSS file  /// -->
       <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+      <!-- /// tito CSS styling /// -->
+      <link rel="stylesheet" type="text/css" href='https://ti.to/pnwscala/2014.css?version=4' />
   </head>
   <body class="remove-scroll">
     <!-- ///  preloader  /// -->
@@ -44,16 +46,17 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right" id="archive-nav">
-              <li><a href="http://pnwscala.org/2013/index.html">&nbsp;2013</a></li>
+              <li><a href="/2013/index.html">&nbsp;2013</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right" id="nav">
               <li class="active"><a href="#home">Home</a></li>
-              <li><a href="#cfp">CFP</a></li>
+              <li><a href="#talks">Talks</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+<!--              <li><a href="#schedule">Schedule</a></li> -->
+              <li><a href="#sponsors">Sponsors</a></l>
               <li><a href="#registration">Registration</a></li>
-              <li><a href="#sponsors">Sponsors</a></li>
               <li><a href="#ourLocation">Contact</a></li>
-              <li><a href="#conduct">Conduct</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
 
@@ -129,6 +132,447 @@
     </div>
     <!-- ///  end countdown  /// -->
 
+    <!--
+    <div class="schedule" id="schedule">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Schedule</h1>
+          <p>TBA</p>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="talks" id="talks">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Talks</h1>
+          <p>More talks <em>to be announced</em>!</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12 wow fadeInDown animated" data-wow-animation-name="fadeInDown" style="visibility: visible; -webkit-animation: fadeInDown;">
+            <div class="tab-content">
+              <div class="tab-pane active">
+                <div class="panel-group" id="accordion">
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Fire Bad, Tree Pretty</h4>
+                      <h5><a href="#avi-bryant">Avi Bryant</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Brushfire is a framework for distributed, supervised learning of ensembles of decision trees. It is designed to be extremely scalable (both in number of observations and number of features) and extremely customizable: it makes heavy use of Scala generics and typeclasses to allow easy parameterization of each stage of the tree building algorithm. This talk will walk through the overall architecture and algorithm, then show some simple concrete examples of using Brushfire with Scalding to build trees on Hadoop.</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Apache Spark I: From Scala Collections to Fast Interactive Big Data with Spark</h4>
+                      <h5><a href="#evan-chan">Evan Chan</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>This session introduces you to Spark by starting with something basic: Scala collections and functional data transforms.  We then look at how Spark expands the functional collection concept to enable massively distributed, fast computations.  The second half of the talk is for those of you who want to know the secrets to make Spark really fly for querying tabular datasets.   We will dive into row vs columnar datastores and the facilities that Spark has for enabling interactive data analysis, including Spark SQL and the in-memory columnar cache.   Learn why Scala's functional collections are the best foundation for working with data!</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Apache Spark II: Down The Big Data Rabbit Hole With Spark Streaming, Cassandra, Scala & Akka</h4>
+                      <h5><a href="#helena-edelson">Helena Edelson</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>In this code-heavy session we will step into what Spark Streaming is. Then put it in the context of an event-driven Akka application for real-time delivery of meaning at high velocity. We will do this by showing how to easily integrate Spark and Spark Streaming over Cassandra with the Spark Cassandra Connector. All within a common use case: working with time-series data, which Cassandra is great at. For those just wanting an easier, cleaner path of integration with Cassandra, this talk will introduce the new Spark C* Driver, making its way into Slick and other useful Scala tools. </p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">The First Hit is Always Free: A Skeptic's Look at scalaz' "Gateway Drugs"</h4>
+                      <h5><a href="#brendan-mcadams">Brendan McAdams</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>"We've all seen them on the corner of our local software development neighborhoods: FP purists, shamelessly peddling scalaz to unsuspecting developers. Lured in by promises of Free Monoids, Semigroups, and Endofunctors these developers soon seem lost in throes of ecstatic coding. "</p>
+
+<p>To the skeptical and stubbornly practical among us, the above might ring a little true – especially if read in Rob Serling's voice. Images of gibbering horrors lurking in the depths of mathematical perfection swim before our eyes. </p>
+
+<p>But what if there is true value in the world of scalaz? What if it is possible to use these tools for good (and a little bit of evil – it's fun to use learning for evil!) and profit... Without getting hopelessly lost in the opium dens of FP?</p>
+
+<p>In this talk we will look at some of the "gateway drugs" of scalaz: Validation, NonEmptyList, \/, OptionT, and more. How do they work from a practical standpoint? What is their value for real world applications? And just how fun is it to *really* code with these tools?</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Rapture: The Art of the One-Liner</h4>
+                      <h5><a href="#jon-pretty">Jon Pretty</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Rapture is a collection of libraries for everyday programming tasks like I/O, JSON & XML processing and cryptography, with a focus on beautiful, concise and intuitive code. Rapture packs a lot of power into a single line of code, and Jon will race through fifty of Rapture's smartest one-liners faster than one-a-minute, showing you how easy it is to perform everyday file and network I/O, structured data and cryptography operations, without compromising type safety. All the code in the talk will be easy for beginners to understand, but more advanced developers may also learn some new tricks, so there should be something for everyone!</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Composing Project Archetypes with SBT AutoPlugins</h4>
+                      <h5><a href="#mark-schaake">Mark Schaake</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>SBT 0.13.5 introduced AutoPlugins as the future of SBT plugin development. AutoPlugins provide interesting features that simplify plugin development while enabling exciting new possibilities for plugin composition. At the Allen Institute for Artificial Intelligence, we are composing some core AutoPlugins into "Archetype" plugins for Library, CLI, WebService, and WebApplication projects. This strategy has proven to greatly simplify our SBT builds while enforcing consistency across projects (something we value very much at AI2!).</p>
+
+                      <p>In this talk, I will:
+                        <ul>
+                          <li>provide an introduction to AutoPlugins features that enabled our Archetype strategy</li>
+                          <li>discuss our specific motivations (pain points) that led to this strategy</li>
+                          <li>show our plugins, how they are composed, and how they are used to simplify builds and enforce consistency across projects.</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Don't cross the streams</h4>
+                      <h5><a href="#marc-millstone">Marc Millstone</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Streaming algorithms are a set of techniques for computing on data streams in which the stream of data is presented as a sequence of elements with each element only being processed once. Additionally, these methods are only allowed a constant memory footprint, independent of the size of the input stream. These constraints often lead to required tradeoffs. Solutions are often correct to a threshold, with approximations being required. Understanding the vast application of these methods and how to best integrate them into their software should be a core competency in the modern engineers toolbox.</p>
+
+                      <p>This talk will weave together
+                        <ol>
+                          <li>real-world applications of streaming algorithms encountered here at Socrata,</li>
+                          <li>the types and data structures (with open-source implementations in Scala) used internally to implement our streaming algorithm data pipeline, </li>
+                          <li>the theory and data structures behind approximation algorithms including the popular Count-Min Sketch and HyperLogLog as well as other lesser-known techniques, and</li>
+                          <li>references to and examples of integrating JVM-based implementations of these methods found in Twitter’s Algebird and Clearspring’s stream-lib into the working engineer’s data pipeline.</li>
+                        </ol>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Types out of patmat</h4>
+                      <h5><a href="#stephen-compall">Stephen Compall</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>At first glance, the pattern matcher appears to be a mechanism merely for choosing among structural conditions of your data structures.  However, scalac is much more powerful than that; many patterns have interesting type-level consequences on the other side of their associated rocketships (=>).  This is a powerful tool for modeling in a functional style, as well as a source of interesting type-system bugs.  We'll examine various type-level effects of patterns, how you can use them to write safer programs, and what pitfalls arise in scalac's current implementation.</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Towards a Safer Scala</h4>
+                      <h5><a href="#leif-wickland">Leif Wickland</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Scala has many, well-known WTF LOLs that result from the language too enthusiastically attempting to help the programmer.  Scala can also be written across a wide range of styles from the Typelevel to the Better Java.</p>
+
+                      <p>The Scala ecosystem has static analysis and linting tools which can help avoid confusing behavior, baffling compiler messages, and divergent coding styles.  We'll survey the available tools, considering which can be best applied in greenfield and existing projects. </p>
+
+                      <p>Attendees will leave with steps to immediately improve their production builds and strategies to introduce more sweeping changes with time.</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Unruly Creatures: Strategies for dealing with Real Numbers</h4>
+                      <h5><a href="#erik-osheim">Erik Osheim</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>If computers are supposed to be good at math, then why is it so hard to do math correctly with computers? We have trained programmers to reach for floating point types, and to deal with the fallout using some combination of profanity, resignation, and numerical analysis.</p>
+
+<p>We will explore alternatives, focusing on computable real numbers as implemented in Spire, as well as discussing alternatives such as Algebraic numbers and Continued fractions. The focus will be on practical use cases, as well as the benefits of laziness and functional programming when implementing and using these exotic types.</p>
+                    </div>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">What every (Scala) programmer should know about category theory</h4>
+                      <h5><a href="#gabriel-claramunt">Gabriel Claramunt</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Aren't you tired of just nodding along when your friends starts talking about morphisms? Do you feel left out when your coworkers  discuss a coproduct endofunctor?
+From the dark corners of mathematics to a programming language near you, category theory offers a compact but powerful set of tools to build and reason about programs.
+What's a category? What's a functor? This talks aims to present the basic concepts and why they matter to everyday coding.</p>
+
+<p>Next time, you too can be the soul of the party and impress your friends with category theory!*</p>
+<p>*(results may vary)</p>
+                    </div>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Hands-on Scala.js</h4>
+                      <h5><a href="#li-haoyi">Li Haoyi</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>This talk will explore the hands-on beginner experience of making things with Scala.js. In particular, it will cover a few topics:
+                        <ul>
+                          <li>How to make a standalone Scala.js single-page web app</li>
+                          <li>How to make and publish a cross-platform (JS/JVM) Scala library </li>
+                          <li>How to make a client-server Scala.js website with shared code</li>
+                        </ul>
+                      </p>
+                      <p>Each topic will take 25 minutes, and will take you through the entire process from "clone this repo from Github" to "complete, usable project". By the end of this, anyone who's familiar with both Scala and web-dev should be ready to begin cranking out their next project in Scala.js, whatever that may be.</p>
+
+<p>Bring your computers with SBT and IDEs ready to follow along!</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">scala.meta: the story begins</h4>
+                      <h5><a href="#eugene-burmako">Eugene Burmako
+</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>As promised at Scala Days this summer, in fall we are publishing the first technology preview of scala.meta, a simple, robust and portable metaprogramming platform for Scala. Our presentation will highlight the capabilities of the technology preview that will be released during the talk, demonstrate examples of several macros migrated to the new API, explore the ideas beyond just macros, and elaborate on our future plans.</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">One Year of Akka</h4>
+                      <h5><a href="#ryan-tanner">Ryan Tanner</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>How do three people build a scalable backend in a language only one has ever used before in just three months?  By getting something else to do the heavy lifting.</p>
+                      <p>When Conspire graduated from TechStars and began planning our revamped product, we knew we needed a backend that was resilient, scalable and simple to understand.  I was the company’s first hire and the only person on the team with any Scala experience but I convinced them to go with Akka and Scala.  In roughly four months, we built exactly the backend we envisioned.</p>
+                      <p>That system has been in production for over a year.  I'll discuss the challenges we faced with Scala and Akka and the lessons we've learned as we adapt our system to the changing needs of the business.  Most importantly, I'll talk about what we did wrong and how we're addressing those issues going forward.  (Bonus: the story of how our cluster crashed and burned the first time we put it into production!)</p>
+                    </div>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">Building a Better Future: Advanced Error Handling for Concurrent Programming with Scalaz and Shapeless</h4>
+                      <h5><a href="#jean-remi-desjardins">Jean-Rémi Desjardins
+</a>, <a href="#eddie-carlson">Eddie Carlson
+</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p>Here at Whitepages, we are redesigning a search system that must execute tasks concurrently, while providing smart flow-control and recovery in the presence of failures. </p>
+
+                      <p>We need a nuanced handling of errors for a variety of failure modes, which standard Futures alone do not provide. The system must also support timeouts at multiple levels in a way that allows recovery of useful information. Furthermore, the plan definition code must be clear, concise, and correct. </p>
+
+                      <p>In order to achieve the above goals in a functional and type-safe manner, we need a new, powerful abstraction. We decided to build a new future for ourselves! We would very much like to talk about our experience using and adapting Scalaz and Shapeless to implement functional, multi-faceted error handling of concurrent tasks.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- /// begin speakers /// -->
+    <div class="speakers" id="speakers">
+      <div class="container">
+        <div class="row text-center">
+          <div class="section-heading">
+            <h1>Speakers</h1>
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="avi-bryant">Avi Bryant</h3>
+              <hr>
+              <p>
+                Avi has led product, engineering, and data science teams at Etsy, Twitter and Dabble DB (which he co-founded and Twitter acquired). He’s known for his open source work on projects such as Seaside, Scalding, and Algebird. Avi currently works at Stripe.
+            </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="eugene-burmako">Eugene Burmako</h3>
+              <hr>
+              <p>
+                Programming languages enthusiast, PhD student at EPFL, member of Scala team, Scala macros guy.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="eddie-carlson">Eddie Carlson</h3>
+              <hr>
+              <p>
+                Eddie has been building distributed search services in Scala for the last year and a half. He joined Whitepages two years ago, after graduating from the University of Washington. Whitepages had just begun to adopt Scala, and Eddie has worked to pioneer Scala usage at the company. He attended last year’s PNW Scala Conference.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="gabriel-claramunt">Gabriel Claramunt</h3>
+              <hr>
+              <p>
+                Gabriel was a happy enterprise developer until he found Scala and ruined his life. Now he wanders around mumbling strange words like "functors" and "curry-howard". In spite of claiming to live in Uruguay, he had a pretty nomadic life, having lived in many places across the Americas.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="evan-chan">Evan Chan</h3>
+              <hr>
+              <p>
+Evan loves to design, build, and improve bleeding edge distributed data and backend systems using the latest in open source technologies. He has led the design and implementation of multiple big data platforms based on Storm, Spark, Kafka, Cassandra, and Scala/Akka, including a columnar real-time distributed query engine. He is an active contributor to the Apache Spark project and co-creator of the open-source Spark Job Server. He is a big believer in GitHub, open source, and meetups, and have given talks at various conferences including the Spark Summit and Cassandra Summit. He has Bachelor's and Master's degrees in Electrical Engineering from Stanford University.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="stephen-compall">Stephen Compall</h3>
+              <hr>
+              <p>
+                Stephen Compall, is one of the Scalaz devs, firmly in the typelevel camp, currently working with the Ermine group at McGraw Hill Financial.  You can find a few of his writings about Scala on the <a href="http://typelevel.org/blog">typelevel blog</a>.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="jean-remi-desjardins">Jean-Rémi Desjardins
+</h3>
+              <hr>
+              <p>
+                Jean-Rémi Desjardins just started at Whitepages a few months ago. He joins bringing a wealth of experience in Scala. Although he has only been involved in the Scala community for just over two years now, he has made contributions to important open source projects such as sbt, Play, shapeless, scalaz and Scala itself.
+              </p>
+            </div>
+
+
+            <div class="col-md-4">
+              <h3 id="helena-edelson">Helena Edelson</h3>
+              <hr>
+              <p>
+                Helena has been working with Scala since 2010 in R&amp;D as a Senior Cloud Engineer at VMware and CrowdStrike, and has recently joined the DataStax (Cassandra) Analytics Engineering Team. She is an open source committer on Akka, Spark Cassandra Connector, Scala Cassandra Driver, (soon to be) Slick (adding Cassandra), & previous Spring Committer.
+              </p>
+            </div>
+
+
+            <div class="col-md-4">
+              <h3 id="li-haoyi">Li Haoyi</h3>
+              <hr>
+              <p>Li Haoyi is a software engineer at Dropbox who writes Python/Coffeescript during the day and Scala/Scala.js at night.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="brendan-mcadams">Brendan McAdams</h3>
+              <hr>
+              <p>
+                Having recently returned from several wilderness years of being an itinerant conference speaker, trainer, & consultant for such fine companies as MongoDB & Typesafe, Brendan now writes Scala code for Netflix, building beautiful APIs with Scalatra & Swagger.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="marc-millstone">Marc Millstone</h3>
+              <hr>
+              <p>
+                Marc Millstone is a Lead Backend Engineer at Socrata, leading the Analytics and Machine Learning (AniML) team. Before joining Socrata, Marc spent two years in the Mathematical Sciences group at IBM Watson Research, as both a post-doc and Research Staff Member. He obtained his Ph.D. from the Courant Institute of Mathematical Sciences at New York University, where he worked jointly with Lawrence Berkeley National lab, specializing in methods for solving large-scale practical optimization problems.
+              </p>
+            </div>
+
+
+
+            <div class="col-md-4">
+              <h3 id="erik-osheim">Erik Osheim</h3>
+              <hr>
+              <p>
+                Erik is one of the creators of Spire, a Typelevel project designed to support fast, generic, and precise numerical programming in Scala. He is a contributor to the Scala compiler and standard library, and uses Scala to push the limits of JVM performance and expressiveness. Erik works at Meetup, where he collects, processes, and analyzes data to learn how to more effectively create community.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="jon-pretty">Jon Pretty</h3>
+              <hr>
+              <p>
+                Jon has been involved in the Scala community for the last ten years, having launched the first commercial and open-source Scala software back in 2005. Since then, he has successfully deployed Scala projects into small, medium and large businesses, and UK government, but is best known these days for his work on Rapture.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h3 id="mark-schaake">Mark Schaake</h3>
+              <hr>
+              <p>
+                Mark Schaake is a full-stack software engineer at the Allen Institute for Artificial Intelligence. He's been a software engineer since 2005. He's been full-time developing with Scala and Akka since 2011. He is passionate about Scala and Akka (and all things reactive). He enjoys building web services with Spray and web applications with AngularJS.
+              </p>
+            </div>
+
+
+            <div class="col-md-4">
+              <h3 id="ryan-tanner">Ryan Tanner</h3>
+              <hr>
+              <p>
+                Ryan Tanner lives in Boulder, CO and is a full-stack developer at Conspire, working primarily with Scala, Akka, Play, ElasticSearch and Neo4j.  Conspire tells you exactly how to get the best introduction to whoever you want to meet — a customer, employer or investor.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="leif-wickland">Leif Wickland</h3>
+              <hr>
+              <p>
+                  Leif Wickland writes Scala at Oracle in a quiet little corner that nobody has heard about. He lives in Bozeman, Montana, where he attempts to keep up with the neighbors by running, cycling, and skiing long distances on various surfaces. He's better at riding a bike uphill than downhill. He's getting better at skiing uphill. He still sucks at running at any pitch.
+              </p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- /// end speakers /// -->
+
+    <!-- ///  begin partners  /// -->
+    <div class="sponsors wow fadeInUp" id="sponsors">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Sponsors</h1>
+          <p class="lead">PNWScala would not be possible without the help of our generous sponsors.</p>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <ul class="list-inline">
+              <li><h2>Platinum</h2></li>
+              <li><a href="http://www.socrata.com"><img src="../assets/img/socrata_logo_150px_wide.png" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-12">
+            <ul class="list-inline">
+              <li><h2>Gold</h2></li>
+              <li><a href="http://janrain.com"><img src="../assets/img/janrain_logo_header.png" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-12">
+            <ul class="list-inline">
+              <li><h2>Silver</h2></li>
+              <li><a href="http://www.47deg.com/"><img src="../assets/img/47-logo.png" alt="" style="width:60px;"></a></li>
+              <li><a href="http://www.whitepages.com"><img src="/assets/img/whitepages_new.png" style="-webkit-filter: invert(0.6);"/></a></li>
+              <!--<li><span id="whitepages-logo" style="background-image:url('/assets/img/whitepages_new.png');width:190px;height:46px;"/></li>-->
+            </ul>
+          </div>
+          <div class="col-lg-12">
+            <ul class="list-inline">
+              <li><h3>Friend of PNWScala</h3></li>
+              <li><a href="http://www.typesafe.com"><img src="../assets/img/typesafe.png" alt=""></a></li>
+              <li><a href="http://www.geezeo.com/"><img src="/assets/img/geezeo_logo.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ///  end partners  /// -->
 
     <!-- /// begin registration /// -->
     <div class="registration" id="registration">
@@ -136,7 +580,8 @@
         <div class="row">
           <div class="section-heading">
             <h1>Registration</h1>
-            <p>Registration will be online soon! Stay tuned</p>
+
+            <div id='tito-register-form'></div>
           </div>
         </div>
       </div>
@@ -145,6 +590,7 @@
 
 
     <!-- ///  begin faq  /// -->
+    <!--
     <div class="faq" id="cfp">
       <div class="container">
         <div class="row">
@@ -181,46 +627,12 @@
         </div>
       </div>
     </div>
+-->
     <!-- ///  end faq  /// -->
 
 
 
-    <!-- ///  begin partners  /// -->
-    <div class="sponsors wow fadeInUp" id="sponsors">
-      <div class="container">
-        <div class="section-heading">
-          <h1>Sponsors</h1>
-          <p class="lead">PNWScala would not be possible without the help of our generous sponsors.</p>
-        </div>
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li><h2>Platinum</h2></li>
-              <li><img src="../assets/img/socrata_logo_150px_wide.png" alt=""></li>
-            </ul>
-          </div>
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li><h2>Gold</h2></li>
-              <li><img src="../assets/img/janrain_logo_header.png" alt=""></li>
-            </ul>
-          </div>
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li><h2>Silver</h2></li>
-              <li><img src="../assets/img/47-logo.png" alt="" style="width:60px;"></li>
-            </ul>
-          </div>
-          <div class="col-lg-12">
-            <ul class="list-inline">
-              <li><h3>Friend of PNWScala</h3></li>
-              <li><img src="../assets/img/typesafe.png" alt=""></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ///  end partners  /// -->
+
 
     <!-- ///  begin map, subscribe, contacts  /// -->
     <!-- ///  set your venue address in data-location attribute  /// -->
@@ -346,5 +758,6 @@ Portland, OR">
     <script src="assets/js/plugins/validator/jquery.form-validator.min.js"></script>
     <script src="assets/js/plugins/wow/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src='https://ti.to/pnwscala/2014.js?version=3' type='text/javascript'></script>
   </body>
 </html>
