@@ -717,6 +717,10 @@ fieldset[disabled] .btn-link:focus {
   text-align: center;
   color: #999999;
 }
+.talks .note {
+    font-style: italic;
+    color: #c7254e;
+}
 .talks h5 {
     display: block;
     text-decoration: none;

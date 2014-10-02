@@ -147,7 +147,7 @@
       <div class="container">
         <div class="section-heading">
           <h1>Talks</h1>
-          <p>More talks <em>to be announced</em>!</p>
+          <p>Talks will be approximately forty minutes in length with the exception of those marked as <span class="note">workshop</span>, which will be an hour and a half with a short break in the middle.</p>
         </div>
         <div class="row">
           <div class="col-md-12 wow fadeInDown animated" data-wow-animation-name="fadeInDown" style="visibility: visible; -webkit-animation: fadeInDown;">
@@ -231,7 +231,7 @@
 
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h4 class="panel-title">Don't cross the streams</h4>
+                      <h4 class="panel-title">Don't cross the streams <span class="note">(workshop)</span></h4>
                       <h5><a href="#marc-millstone">Marc Millstone</a></h5>
                     </div>
                     <div class="panel-body">
@@ -303,7 +303,7 @@ What's a category? What's a functor? This talks aims to present the basic concep
 
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h4 class="panel-title">Hands-on Scala.js</h4>
+                      <h4 class="panel-title">Hands-on Scala.js <span class="note">(workshop)</span></h4>
                       <h5><a href="#li-haoyi">Li Haoyi</a></h5>
                     </div>
                     <div class="panel-body">
@@ -357,6 +357,39 @@ What's a category? What's a functor? This talks aims to present the basic concep
                       <p>We need a nuanced handling of errors for a variety of failure modes, which standard Futures alone do not provide. The system must also support timeouts at multiple levels in a way that allows recovery of useful information. Furthermore, the plan definition code must be clear, concise, and correct. </p>
 
                       <p>In order to achieve the above goals in a functional and type-safe manner, we need a new, powerful abstraction. We decided to build a new future for ourselves! We would very much like to talk about our experience using and adapting Scalaz and Shapeless to implement functional, multi-faceted error handling of concurrent tasks.</p>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">What's new since <em>Programming in Scala</em></h4>
+                      <h5><a href="#marconi-lanna">Marconi Lanna</a></h5>
+                    </div>
+                    <div class="panel-body">
+                      <p><em>Programming in Scala</em>, by Martin Odersky et al., is one of the most comprehensive and the de facto reference for Scala.</p>
+
+                      <p>However, the book, originally published in 2008 for Scala 2.7.2, has not been updated since its second edition in 2010, covering up until Scala 2.8.1. In the meantime, Scala had 3 major releases with numerous fresh and advanced features.</p>
+
+                      <p>While we wait for a third edition of <em>Programming in Scala</em> to describe all the latest and greatest Scala features introduced in the last 4 years, this talk presents the main features introduced in Scala 2.9, 2.10, and 2.11:
+                        <ul>
+                          <li>Parallel collections</li>
+                          <li>Value classes, implicit classes, and extension methods</li>
+                          <li>String interpolation</li>
+                          <li><code>Futures</code> and <code>Promises</code></li>
+                          <li>Akka actors</li>
+                          <li>Macros and quasiquotes</li>
+                          <li>Reflection</li>
+                          <li>Modularization</li>
+                          <li>Dynamic types</li>
+                          <li>Error handling with <code>Try</code></li>
+                          <li>The <code>App</code> trait</li>
+                          <li>New methods in collections</li>
+                          <li>Case classes with more than 22 parameters</li>
+                          <li><code>Predef.???</code></li>
+                          <li>sbt incremental compilation</li>
+                          <li>2.12 and beyond: what's in Scala future?</li>
+                        </ul>
+                      </p>
                     </div>
                   </div>
 
@@ -462,6 +495,13 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
           <div class="row text-center">
 
             <div class="col-md-4">
+              <h3 id="marconi-lanna">Marconi Lanna</h3>
+              <hr>
+              <p>Marconi has been writing software for fun and profit since last century, when the Internet was still black & white and silent. He loves computers, Internet, curly braces, angle brackets, Scala, and working with great people. Marconi is Senior Software Innovator at Originate and spends most of his free time trying to get his little daughter out of trouble. He has been programming in Scala since 2010.</p>
+              </p>
+            </div>
+
+            <div class="col-md-4">
               <h3 id="brendan-mcadams">Brendan McAdams</h3>
               <hr>
               <p>
@@ -487,9 +527,6 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-          </div>
-          <div class="row text-center">
-
             <div class="col-md-4">
               <h3 id="jon-pretty">Jon Pretty</h3>
               <hr>
@@ -497,6 +534,7 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
                 Jon has been involved in the Scala community for the last ten years, having launched the first commercial and open-source Scala software back in 2005. Since then, he has successfully deployed Scala projects into small, medium and large businesses, and UK government, but is best known these days for his work on Rapture.
               </p>
             </div>
+
 
             <div class="col-md-4">
               <h3 id="mark-schaake">Mark Schaake</h3>
@@ -506,6 +544,9 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
+          </div>
+          <div class="row text-center">
+
 
             <div class="col-md-4">
               <h3 id="ryan-tanner">Ryan Tanner</h3>
@@ -514,9 +555,6 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
                 Ryan Tanner lives in Boulder, CO and is a full-stack developer at Conspire, working primarily with Scala, Akka, Play, ElasticSearch and Neo4j.  Conspire tells you exactly how to get the best introduction to whoever you want to meet — a customer, employer or investor.
               </p>
             </div>
-
-          </div>
-          <div class="row text-center">
 
             <div class="col-md-4">
               <h3 id="leif-wickland">Leif Wickland</h3>
