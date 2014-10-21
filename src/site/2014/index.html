@@ -132,6 +132,441 @@
     </div>
     <!-- ///  end countdown  /// -->
 
+    <!-- ///  begin schedule  /// -->
+    <div class="schedule" id="schedule">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Schedule</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-12 wow fadeInDown">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a href="#first-day" data-toggle="tab">Friday, Nov 14</a></li>
+              <li><a href="#second-day" data-toggle="tab">Saturday, Nov 15</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="first-day">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                          8:30 am - Doors Open / Badge Pickup
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                            8:50 am - Welcome / Announcements
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          9:00 am - Rapture: The Art of the One-Liner - Jon Pretty
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>
+                          Rapture is a collection of libraries for everyday programming tasks like I/O, JSON & XML processing and cryptography, with a focus on beautiful, concise and intuitive code. Rapture packs a lot of power into a single line of code, and Jon will race through fifty of Rapture's smartest one-liners faster than one-a-minute, showing you how easy it is to perform everyday file and network I/O, structured data and cryptography operations, without compromising type safety. All the code in the talk will be easy for beginners to understand, but more advanced developers may also learn some new tricks, so there should be something for everyone!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          9:50 am - The First Hit is Always Free: A Skeptic's Look at scalaz' "Gateway Drugs” - Brendan McAdams
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>"We've all seen them on the corner of our local software development neighborhoods: FP purists, shamelessly peddling scalaz to unsuspecting developers. Lured in by promises of Free Monoids, Semigroups, and Endofunctors these developers soon seem lost in throes of ecstatic coding. "</p>
+
+                        <p>To the skeptical and stubbornly practical among us, the above might ring a little true – especially if read in Rob Serling's voice. Images of gibbering horrors lurking in the depths of mathematical perfection swim before our eyes. </p>
+
+                        <p>But what if there is true value in the world of scalaz? What if it is possible to use these tools for good (and a little bit of evil – it's fun to use learning for evil!) and profit... Without getting hopelessly lost in the opium dens of FP?</p>
+
+                        <p>
+                          In this talk we will look at some of the "gateway drugs" of scalaz: Validation, NonEmptyList, \/, OptionT, and more. How do they work from a practical standpoint? What is their value for real world applications? And just how fun is it to *really* code with these tools?
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                          10:40 am - Types out of patmat - Stephen Compall
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>
+                          At first glance, the pattern matcher appears to be a mechanism merely for choosing among structural conditions of your data structures.  However, scalac is much more powerful than that; many patterns have interesting type-level consequences on the other side of their associated rocketships (=>).  This is a powerful tool for modeling in a functional style, as well as a source of interesting type-system bugs.  We'll examine various type-level effects of patterns, how you can use them to write safer programs, and what pitfalls arise in scalac's current implementation.
+                       </p>
+                      </div>
+                    </div>
+</div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        11:30 am - Lunch
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                          12:30 am - Don’t cross the streams - Marc Millstone
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>Streaming algorithms are a set of techniques for computing on data streams in which the stream of data is presented as a sequence of elements with each element only being processed once. Additionally, these methods are only allowed a constant memory footprint, independent of the size of the input stream. These constraints often lead to required tradeoffs. Solutions are often correct to a threshold, with approximations being required. Understanding the vast application of these methods and how to best integrate them into their software should be a core competency in the modern engineers toolbox.</p>
+
+                        <p>This talk will weave together
+                          <ol>
+                            <li>real-world applications of streaming algorithms encountered here at Socrata,</li>
+                            <li>the types and data structures (with open-source implementations in Scala) used internally to implement our streaming algorithm data pipeline, </li>
+                            <li>the theory and data structures behind approximation algorithms including the popular Count-Min Sketch and HyperLogLog as well as other lesser-known techniques, and</li>
+                            <li>references to and examples of integrating JVM-based implementations of these methods found in Twitter’s Algebird and Clearspring’s stream-lib into the working engineer’s data pipeline.</li>
+                          </ol>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        2:00 pm - Break
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                          2:20 pm - Apache Spark I: From Scala Collections to Fast Interactive Big Data with Spark - Evan Chan
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>This session introduces you to Spark by starting with something basic: Scala collections and functional data transforms.  We then look at how Spark expands the functional collection concept to enable massively distributed, fast computations.  The second half of the talk is for those of you who want to know the secrets to make Spark really fly for querying tabular datasets.   We will dive into row vs columnar datastores and the facilities that Spark has for enabling interactive data analysis, including Spark SQL and the in-memory columnar cache.   Learn why Scala's functional collections are the best foundation for working with data!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                          3:10 pm - Apache Spark II: Streaming Big Data Analytics with Team Apache, Scala & Akka - Helena Edelson
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>
+                          In this talk we will step into Spark over Cassandra with Spark Streaming and Kafka. Then put it in the context of an event-driven Akka application for real-time delivery of meaning at high velocity. We will do this by showing how to easily integrate Apache  Spark and Spark Streaming with Apache Cassandra and Apache Kafka using the Spark Cassandra Connector. All within a common use case: working with time-series data, which Cassandra excells at for data locality and speed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        4:00 pm - Break
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                          4:20 pm - scala.meta: the story begins - Eugene Burmako
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>As promised at Scala Days this summer, in fall we are publishing the first technology preview of scala.meta, a simple, robust and portable metaprogramming platform for Scala. Our presentation will highlight the capabilities of the technology preview that will be released during the talk, demonstrate examples of several macros migrated to the new API, explore the ideas beyond just macros, and elaborate on our future plans.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                          5:10 pm - Towards a Safer Scala - Leif Wickland
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>Scala has many, well-known WTF LOLs that result from the language too enthusiastically attempting to help the programmer.  Scala can also be written across a wide range of styles from the Typelevel to the Better Java.</p>
+
+                        <p>The Scala ecosystem has static analysis and linting tools which can help avoid confusing behavior, baffling compiler messages, and divergent coding styles.  We'll survey the available tools, considering which can be best applied in greenfield and existing projects. </p>
+
+                        <p>Attendees will leave with steps to immediately improve their production builds and strategies to introduce more sweeping changes with time.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- end Friday -->
+
+              <!-- begin Saturday -->
+              <div class="tab-pane" id="second-day">
+                <div class="panel-group" id="accordion2">
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        8:30 am - Doors open
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        8:50 am - Announcements
+                      </h4>
+                    </div>
+                  </div>
+
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
+                          9:00 am - Fire Bad, Tree Pretty - Avi Bryant
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseNine" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>Brushfire is a framework for distributed, supervised learning of ensembles of decision trees. It is designed to be extremely scalable (both in number of observations and number of features) and extremely customizable: it makes heavy use of Scala generics and typeclasses to allow easy parameterization of each stage of the tree building algorithm. This talk will walk through the overall architecture and algorithm, then show some simple concrete examples of using Brushfire with Scalding to build trees on Hadoop.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+                          9:50 am - What every (Scala) programmer should know about category theory - Gabriel Claramont
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>Aren't you tired of just nodding along when your friends starts talking about morphisms? Do you feel left out when your coworkers  discuss a coproduct endofunctor?
+From the dark corners of mathematics to a programming language near you, category theory offers a compact but powerful set of tools to build and reason about programs.
+What's a category? What's a functor? This talks aims to present the basic concepts and why they matter to everyday coding.</p>
+
+                        <p>Next time, you too can be the soul of the party and impress your friends with category theory!*</p>
+                        <p>*(results may vary)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
+                          10:40 am - One Year of Akka - Ryan Tanner
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseEleven" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>How do three people build a scalable backend in a language only one has ever used before in just three months?  By getting something else to do the heavy lifting.</p>
+                        <p>When Conspire graduated from TechStars and began planning our revamped product, we knew we needed a backend that was resilient, scalable and simple to understand.  I was the company’s first hire and the only person on the team with any Scala experience but I convinced them to go with Akka and Scala.  In roughly four months, we built exactly the backend we envisioned.</p>
+                        <p>That system has been in production for over a year.  I'll discuss the challenges we faced with Scala and Akka and the lessons we've learned as we adapt our system to the changing needs of the business.  Most importantly, I'll talk about what we did wrong and how we're addressing those issues going forward.  (Bonus: the story of how our cluster crashed and burned the first time we put it into production!)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        11:30 am - Lunch
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">
+                          12:30 pm - Hands-on Scala.js - Li Haoyi
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwelve" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>This talk will explore the hands-on beginner experience of making things with Scala.js. In particular, it will cover a few topics:
+                          <ul>
+                            <li>How to make a standalone Scala.js single-page web app</li>
+                            <li>How to make and publish a cross-platform (JS/JVM) Scala library </li>
+                            <li>How to make a client-server Scala.js website with shared code</li>
+                          </ul>
+                        </p>
+                        <p>Each topic will take 25 minutes, and will take you through the entire process from "clone this repo from Github" to "complete, usable project". By the end of this, anyone who's familiar with both Scala and web-dev should be ready to begin cranking out their next project in Scala.js, whatever that may be.</p>
+
+                        <p>Bring your computers with SBT and IDEs ready to follow along!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        2:00 pm - Break
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">
+                          2:20 pm - Unruly Creatures: Strategies for dealing with Real Numbers - Erik Osheim
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThirteen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>If computers are supposed to be good at math, then why is it so hard to do math correctly with computers? We have trained programmers to reach for floating point types, and to deal with the fallout using some combination of profanity, resignation, and numerical analysis.</p>
+
+                        <p>We will explore alternatives, focusing on computable real numbers as implemented in Spire, as well as discussing alternatives such as Algebraic numbers and Continued fractions. The focus will be on practical use cases, as well as the benefits of laziness and functional programming when implementing and using these exotic types.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">
+                          3:10 pm - What's new since <em>Programming in Scala</em> - Marconi Ianna
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFourteen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p><em>Programming in Scala</em>, by Martin Odersky et al., is one of the most comprehensive and the de facto reference for Scala.</p>
+
+                        <p>However, the book, originally published in 2008 for Scala 2.7.2, has not been updated since its second edition in 2010, covering up until Scala 2.8.1. In the meantime, Scala had 3 major releases with numerous fresh and advanced features.</p>
+
+                        <p>While we wait for a third edition of <em>Programming in Scala</em> to describe all the latest and greatest Scala features introduced in the last 4 years, this talk presents the main features introduced in Scala 2.9, 2.10, and 2.11:
+                          <ul>
+                            <li>Parallel collections</li>
+                            <li>Value classes, implicit classes, and extension methods</li>
+                            <li>String interpolation</li>
+                            <li><code>Futures</code> and <code>Promises</code></li>
+                            <li>Akka actors</li>
+                            <li>Macros and quasiquotes</li>
+                            <li>Reflection</li>
+                            <li>Modularization</li>
+                            <li>Dynamic types</li>
+                            <li>Error handling with <code>Try</code></li>
+                            <li>The <code>App</code> trait</li>
+                            <li>New methods in collections</li>
+                            <li>Case classes with more than 22 parameters</li>
+                            <li><code>Predef.???</code></li>
+                            <li>sbt incremental compilation</li>
+                            <li>2.12 and beyond: what's in Scala future?</li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        4:00 pm - Break
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen">
+                          4:20 pm - Building a Better Future: Advanced Error Handling for Concurrent Programming with Scalaz and Shapeless - Jean-Rémi Desjardins, Eddie Carlson
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFifteen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>Here at Whitepages, we are redesigning a search system that must execute tasks concurrently, while providing smart flow-control and recovery in the presence of failures. </p>
+
+                        <p>We need a nuanced handling of errors for a variety of failure modes, which standard Futures alone do not provide. The system must also support timeouts at multiple levels in a way that allows recovery of useful information. Furthermore, the plan definition code must be clear, concise, and correct. </p>
+
+                        <p>In order to achieve the above goals in a functional and type-safe manner, we need a new, powerful abstraction. We decided to build a new future for ourselves! We would very much like to talk about our experience using and adapting Scalaz and Shapeless to implement functional, multi-faceted error handling of concurrent tasks.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen">
+                          5:10 pm - Composing Project Archetypes with SBT AutoPlugins - Mark Schaake
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseSixteen" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p>SBT 0.13.5 introduced AutoPlugins as the future of SBT plugin development. AutoPlugins provide interesting features that simplify plugin development while enabling exciting new possibilities for plugin composition. At the Allen Institute for Artificial Intelligence, we are composing some core AutoPlugins into "Archetype" plugins for Library, CLI, WebService, and WebApplication projects. This strategy has proven to greatly simplify our SBT builds while enforcing consistency across projects (something we value very much at AI2!).</p>
+
+                        <p>In this talk, I will:
+                          <ul>
+                            <li>provide an introduction to AutoPlugins features that enabled our Archetype strategy</li>
+                            <li>discuss our specific motivations (pain points) that led to this strategy</li>
+                            <li>show our plugins, how they are composed, and how they are used to simplify builds and enforce consistency across projects.</li>
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ///  end schedule  /// -->
+
     <!--
     <div class="schedule" id="schedule">
       <div class="container">

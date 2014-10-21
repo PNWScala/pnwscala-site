@@ -670,6 +670,64 @@ fieldset[disabled] .btn-link:focus {
 /************************************************
 *** schedule ***
 ************************************************/
+.schedule {
+  padding: 60px 0;
+}
+.schedule .section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.schedule .section-heading h1 {
+  margin-top: 0;
+}
+.schedule .nav-tabs {
+  font-size: 18px;
+}
+.schedule .nav-tabs.nav-justified > li a {
+  border: 1px solid transparent;
+  color: #999999;
+}
+.schedule .nav-tabs.nav-justified > li a:hover {
+  color: #3c3c3c;
+}
+.schedule .nav-tabs.nav-justified > li.active > a,
+.schedule .nav-tabs.nav-justified > li.active > a:hover,
+.schedule .nav-tabs.nav-justified > li.active > a:focus {
+  color: #555555;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.schedule .tab-content {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-width: 0 1px 1px;
+  background-color: #eeeeee;
+}
+.schedule .tab-content h4 {
+  margin: 10px 0;
+}
+.schedule .panel-group {
+  margin-bottom: 0;
+}
+.schedule .panel-title > a {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  color: #999999;
+}
+.schedule .panel-default {
+  border-color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.schedule .panel-default > .panel-heading {
+  background-color: #ffffff;
+}
+/************************************************
+*** talks ***
+************************************************/
 .talks {
   padding: 60px 0;
 }
