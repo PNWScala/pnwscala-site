@@ -712,7 +712,7 @@ fieldset[disabled] .btn-link:focus {
   margin-bottom: 0;
 }
 .schedule .panel-title > a {
-  display: block;
+  //display: block;
   text-decoration: none;
   text-align: left;
   color: #999999;
