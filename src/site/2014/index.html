@@ -320,17 +320,23 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-                          4:20 pm - scala.meta: the story begins
+                          4:20 pm - Miniboxing: JVM Generics without the overhead
                         </a>
                         -
-                        <a href="#eugene-burmako">
-                          Eugene Burmako
+                        <a href="#vlad-ureche">
+                          Vlad Ureche
                         </a>
                       </h4>
                     </div>
                     <div id="collapseSeven" class="panel-collapse collapse">
                       <div class="panel-body">
-                        <p>As promised at Scala Days this summer, in fall we are publishing the first technology preview of scala.meta, a simple, robust and portable metaprogramming platform for Scala. Our presentation will highlight the capabilities of the technology preview that will be released during the talk, demonstrate examples of several macros migrated to the new API, explore the ideas beyond just macros, and elaborate on our future plans.</p>
+                        <p>Generics are now a must-have in any statically typed programming language. Yet, there is a strong tension between the uniform interface exposed to programmers and the low level implementation, which has to deal with data of different sizes and semantics: booleans, integers, floating-point numbers and heap objects. Different languages have taken in very different paths to implementing generics, each with its own advantages and drawbacks. In Java and other JVM languages the standard is boxing primitive values, meaning that heap objects are used to carry primitive values. This leads to significant slowdowns and increased heap consumption, especially when using generic collections for primitive types.</p>
+
+                        <p>Scala proposes specialization as an alternative to boxing: the compiler can duplicate and adapt user code for each primitive type, thus using unboxed data. Specialization has been shown to reliably speed up code and is extensively used in established community libraries, such as spire (non/spire) and breeze (<a href="http://scalanlp.org">scalanlp.org</a>). But statically duplicating code can result in significant jar sizes and long compilation times. For example, specializing a 3-element tuple, which takes three type parameters, yields 1000 almost-identical classes.</p>
+
+                        <p>In the miniboxing project we set out to reduce the static bytecode size while maintaining optimality: we build on the idea of tagged union, thus offering a single variant of the code for all primitive value types. This means the 3-element tuple can now be specialized with just 8 classes. But matching the performance of specialization was a long and convoluted journey. In this presentation I will explain the basics of miniboxing and show what we had to do to match the speed of specialized code.</p>
+
+                        <p>The project's website, <a href="http://scala-miniboxing.org">scala-miniboxing.org</a>, contains all you need to get started: the miniboxing compiler plugin, documentation, usage examples and benchmarks.</p>
                       </div>
                     </div>
                   </div>
@@ -387,7 +393,7 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
-                          9:00 am - Fire Bad, Tree Pretty
+                          9:00 am - Adding Tree and Tree: Distributed Decision Tree Learning
                         </a>
                         -
                         <a href="#avi-bryant">
@@ -625,269 +631,7 @@ What's a category? What's a functor? This talks aims to present the basic concep
     </div>
     <!-- ///  end schedule  /// -->
 
-    <!--
 
-    <div class="talks" id="talks">
-      <div class="container">
-        <div class="section-heading">
-          <h1>Talks</h1>
-          <p>Talks will be approximately forty minutes in length with the exception of those marked as <span class="note">workshop</span>, which will be an hour and a half with a short break in the middle. This is a single track conference, so there's no reason you shouldn't be able to see all these fantastic talks!</p>
-        </div>
-        <div class="row">
-          <div class="col-md-12 wow fadeInDown animated" data-wow-animation-name="fadeInDown" style="visibility: visible; -webkit-animation: fadeInDown;">
-            <div class="tab-content">
-              <div class="tab-pane active">
-                <div class="panel-group" id="accordion">
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Fire Bad, Tree Pretty</h4>
-                      <h5><a href="#avi-bryant">Avi Bryant</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Brushfire is a framework for distributed, supervised learning of ensembles of decision trees. It is designed to be extremely scalable (both in number of observations and number of features) and extremely customizable: it makes heavy use of Scala generics and typeclasses to allow easy parameterization of each stage of the tree building algorithm. This talk will walk through the overall architecture and algorithm, then show some simple concrete examples of using Brushfire with Scalding to build trees on Hadoop.</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Apache Spark I: From Scala Collections to Fast Interactive Big Data with Spark</h4>
-                      <h5><a href="#evan-chan">Evan Chan</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>This session introduces you to Spark by starting with something basic: Scala collections and functional data transforms.  We then look at how Spark expands the functional collection concept to enable massively distributed, fast computations.  The second half of the talk is for those of you who want to know the secrets to make Spark really fly for querying tabular datasets.   We will dive into row vs columnar datastores and the facilities that Spark has for enabling interactive data analysis, including Spark SQL and the in-memory columnar cache.   Learn why Scala's functional collections are the best foundation for working with data!</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Apache Spark II: Streaming Big Data Analytics with Team Apache, Scala & Akka</h4>
-                      <h5><a href="#helena-edelson">Helena Edelson</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>
-                       In this talk we will step into Spark over Cassandra with Spark Streaming and Kafka. Then put it in the context of an event-driven Akka application for real-time delivery of meaning at high velocity. We will do this by showing how to easily integrate Apache  Spark and Spark Streaming with Apache Cassandra and Apache Kafka using the Spark Cassandra Connector. All within a common use case: working with time-series data, which Cassandra excells at for data locality and speed.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">The First Hit is Always Free: A Skeptic's Look at scalaz' "Gateway Drugs"</h4>
-                      <h5><a href="#brendan-mcadams">Brendan McAdams</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>"We've all seen them on the corner of our local software development neighborhoods: FP purists, shamelessly peddling scalaz to unsuspecting developers. Lured in by promises of Free Monoids, Semigroups, and Endofunctors these developers soon seem lost in throes of ecstatic coding. "</p>
-
-<p>To the skeptical and stubbornly practical among us, the above might ring a little true – especially if read in Rob Serling's voice. Images of gibbering horrors lurking in the depths of mathematical perfection swim before our eyes. </p>
-
-<p>But what if there is true value in the world of scalaz? What if it is possible to use these tools for good (and a little bit of evil – it's fun to use learning for evil!) and profit... Without getting hopelessly lost in the opium dens of FP?</p>
-
-<p>In this talk we will look at some of the "gateway drugs" of scalaz: Validation, NonEmptyList, \/, OptionT, and more. How do they work from a practical standpoint? What is their value for real world applications? And just how fun is it to *really* code with these tools?</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Rapture: The Art of the One-Liner</h4>
-                      <h5><a href="#jon-pretty">Jon Pretty</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Rapture is a collection of libraries for everyday programming tasks like I/O, JSON & XML processing and cryptography, with a focus on beautiful, concise and intuitive code. Rapture packs a lot of power into a single line of code, and Jon will race through fifty of Rapture's smartest one-liners faster than one-a-minute, showing you how easy it is to perform everyday file and network I/O, structured data and cryptography operations, without compromising type safety. All the code in the talk will be easy for beginners to understand, but more advanced developers may also learn some new tricks, so there should be something for everyone!</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Composing Project Archetypes with SBT AutoPlugins</h4>
-                      <h5><a href="#mark-schaake">Mark Schaake</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>SBT 0.13.5 introduced AutoPlugins as the future of SBT plugin development. AutoPlugins provide interesting features that simplify plugin development while enabling exciting new possibilities for plugin composition. At the Allen Institute for Artificial Intelligence, we are composing some core AutoPlugins into "Archetype" plugins for Library, CLI, WebService, and WebApplication projects. This strategy has proven to greatly simplify our SBT builds while enforcing consistency across projects (something we value very much at AI2!).</p>
-
-                      <p>In this talk, I will:
-                        <ul>
-                          <li>provide an introduction to AutoPlugins features that enabled our Archetype strategy</li>
-                          <li>discuss our specific motivations (pain points) that led to this strategy</li>
-                          <li>show our plugins, how they are composed, and how they are used to simplify builds and enforce consistency across projects.</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Don't cross the streams <span class="note">(workshop)</span></h4>
-                      <h5><a href="#marc-millstone">Marc Millstone</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Streaming algorithms are a set of techniques for computing on data streams in which the stream of data is presented as a sequence of elements with each element only being processed once. Additionally, these methods are only allowed a constant memory footprint, independent of the size of the input stream. These constraints often lead to required tradeoffs. Solutions are often correct to a threshold, with approximations being required. Understanding the vast application of these methods and how to best integrate them into their software should be a core competency in the modern engineers toolbox.</p>
-
-                      <p>This talk will weave together
-                        <ol>
-                          <li>real-world applications of streaming algorithms encountered here at Socrata,</li>
-                          <li>the types and data structures (with open-source implementations in Scala) used internally to implement our streaming algorithm data pipeline, </li>
-                          <li>the theory and data structures behind approximation algorithms including the popular Count-Min Sketch and HyperLogLog as well as other lesser-known techniques, and</li>
-                          <li>references to and examples of integrating JVM-based implementations of these methods found in Twitter’s Algebird and Clearspring’s stream-lib into the working engineer’s data pipeline.</li>
-                        </ol>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Types out of patmat</h4>
-                      <h5><a href="#stephen-compall">Stephen Compall</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>At first glance, the pattern matcher appears to be a mechanism merely for choosing among structural conditions of your data structures.  However, scalac is much more powerful than that; many patterns have interesting type-level consequences on the other side of their associated rocketships (=>).  This is a powerful tool for modeling in a functional style, as well as a source of interesting type-system bugs.  We'll examine various type-level effects of patterns, how you can use them to write safer programs, and what pitfalls arise in scalac's current implementation.</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Towards a Safer Scala</h4>
-                      <h5><a href="#leif-wickland">Leif Wickland</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Scala has many, well-known WTF LOLs that result from the language too enthusiastically attempting to help the programmer.  Scala can also be written across a wide range of styles from the Typelevel to the Better Java.</p>
-
-                      <p>The Scala ecosystem has static analysis and linting tools which can help avoid confusing behavior, baffling compiler messages, and divergent coding styles.  We'll survey the available tools, considering which can be best applied in greenfield and existing projects. </p>
-
-                      <p>Attendees will leave with steps to immediately improve their production builds and strategies to introduce more sweeping changes with time.</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Unruly Creatures: Strategies for dealing with Real Numbers</h4>
-                      <h5><a href="#erik-osheim">Erik Osheim</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>If computers are supposed to be good at math, then why is it so hard to do math correctly with computers? We have trained programmers to reach for floating point types, and to deal with the fallout using some combination of profanity, resignation, and numerical analysis.</p>
-
-<p>We will explore alternatives, focusing on computable real numbers as implemented in Spire, as well as discussing alternatives such as Algebraic numbers and Continued fractions. The focus will be on practical use cases, as well as the benefits of laziness and functional programming when implementing and using these exotic types.</p>
-                    </div>
-                  </div>
-
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">What every (Scala) programmer should know about category theory</h4>
-                      <h5><a href="#gabriel-claramunt">Gabriel Claramunt</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Aren't you tired of just nodding along when your friends starts talking about morphisms? Do you feel left out when your coworkers  discuss a coproduct endofunctor?
-From the dark corners of mathematics to a programming language near you, category theory offers a compact but powerful set of tools to build and reason about programs.
-What's a category? What's a functor? This talks aims to present the basic concepts and why they matter to everyday coding.</p>
-
-<p>Next time, you too can be the soul of the party and impress your friends with category theory!*</p>
-<p>*(results may vary)</p>
-                    </div>
-                  </div>
-
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Hands-on Scala.js <span class="note">(workshop)</span></h4>
-                      <h5><a href="#li-haoyi">Li Haoyi</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>This talk will explore the hands-on beginner experience of making things with Scala.js. In particular, it will cover a few topics:
-                        <ul>
-                          <li>How to make a standalone Scala.js single-page web app</li>
-                          <li>How to make and publish a cross-platform (JS/JVM) Scala library </li>
-                          <li>How to make a client-server Scala.js website with shared code</li>
-                        </ul>
-                      </p>
-                      <p>Each topic will take 25 minutes, and will take you through the entire process from "clone this repo from Github" to "complete, usable project". By the end of this, anyone who's familiar with both Scala and web-dev should be ready to begin cranking out their next project in Scala.js, whatever that may be.</p>
-
-<p>Bring your computers with SBT and IDEs ready to follow along!</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">scala.meta: the story begins</h4>
-                      <h5><a href="#eugene-burmako">Eugene Burmako
-</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>As promised at Scala Days this summer, in fall we are publishing the first technology preview of scala.meta, a simple, robust and portable metaprogramming platform for Scala. Our presentation will highlight the capabilities of the technology preview that will be released during the talk, demonstrate examples of several macros migrated to the new API, explore the ideas beyond just macros, and elaborate on our future plans.</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">One Year of Akka</h4>
-                      <h5><a href="#ryan-tanner">Ryan Tanner</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>How do three people build a scalable backend in a language only one has ever used before in just three months?  By getting something else to do the heavy lifting.</p>
-                      <p>When Conspire graduated from TechStars and began planning our revamped product, we knew we needed a backend that was resilient, scalable and simple to understand.  I was the company’s first hire and the only person on the team with any Scala experience but I convinced them to go with Akka and Scala.  In roughly four months, we built exactly the backend we envisioned.</p>
-                      <p>That system has been in production for over a year.  I'll discuss the challenges we faced with Scala and Akka and the lessons we've learned as we adapt our system to the changing needs of the business.  Most importantly, I'll talk about what we did wrong and how we're addressing those issues going forward.  (Bonus: the story of how our cluster crashed and burned the first time we put it into production!)</p>
-                    </div>
-                  </div>
-
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">Building a Better Future: Advanced Error Handling for Concurrent Programming with Scalaz and Shapeless</h4>
-                      <h5><a href="#jean-remi-desjardins">Jean-Rémi Desjardins
-</a>, <a href="#eddie-carlson">Eddie Carlson
-</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p>Here at Whitepages, we are redesigning a search system that must execute tasks concurrently, while providing smart flow-control and recovery in the presence of failures. </p>
-
-                      <p>We need a nuanced handling of errors for a variety of failure modes, which standard Futures alone do not provide. The system must also support timeouts at multiple levels in a way that allows recovery of useful information. Furthermore, the plan definition code must be clear, concise, and correct. </p>
-
-                      <p>In order to achieve the above goals in a functional and type-safe manner, we need a new, powerful abstraction. We decided to build a new future for ourselves! We would very much like to talk about our experience using and adapting Scalaz and Shapeless to implement functional, multi-faceted error handling of concurrent tasks.</p>
-                    </div>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">What's new since <em>Programming in Scala</em></h4>
-                      <h5><a href="#marconi-lanna">Marconi Lanna</a></h5>
-                    </div>
-                    <div class="panel-body">
-                      <p><em>Programming in Scala</em>, by Martin Odersky et al., is one of the most comprehensive and the de facto reference for Scala.</p>
-
-                      <p>However, the book, originally published in 2008 for Scala 2.7.2, has not been updated since its second edition in 2010, covering up until Scala 2.8.1. In the meantime, Scala had 3 major releases with numerous fresh and advanced features.</p>
-
-                      <p>While we wait for a third edition of <em>Programming in Scala</em> to describe all the latest and greatest Scala features introduced in the last 4 years, this talk presents the main features introduced in Scala 2.9, 2.10, and 2.11:
-                        <ul>
-                          <li>Parallel collections</li>
-                          <li>Value classes, implicit classes, and extension methods</li>
-                          <li>String interpolation</li>
-                          <li><code>Futures</code> and <code>Promises</code></li>
-                          <li>Akka actors</li>
-                          <li>Macros and quasiquotes</li>
-                          <li>Reflection</li>
-                          <li>Modularization</li>
-                          <li>Dynamic types</li>
-                          <li>Error handling with <code>Try</code></li>
-                          <li>The <code>App</code> trait</li>
-                          <li>New methods in collections</li>
-                          <li>Case classes with more than 22 parameters</li>
-                          <li><code>Predef.???</code></li>
-                          <li>sbt incremental compilation</li>
-                          <li>2.12 and beyond: what's in Scala future?</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
--->
 
     <!-- /// begin speakers /// -->
     <div class="speakers" id="speakers">
@@ -906,13 +650,6 @@ What's a category? What's a functor? This talks aims to present the basic concep
             </p>
             </div>
 
-            <div class="col-md-4">
-              <h3 id="eugene-burmako">Eugene Burmako</h3>
-              <hr>
-              <p>
-                Programming languages enthusiast, PhD student at EPFL, member of Scala team, Scala macros guy.
-              </p>
-            </div>
 
             <div class="col-md-4">
               <h3 id="eddie-carlson">Eddie Carlson</h3>
@@ -922,9 +659,6 @@ What's a category? What's a functor? This talks aims to present the basic concep
               </p>
             </div>
 
-          </div>
-          <div class="row text-center">
-
             <div class="col-md-4">
               <h3 id="gabriel-claramunt">Gabriel Claramunt</h3>
               <hr>
@@ -932,6 +666,9 @@ What's a category? What's a functor? This talks aims to present the basic concep
                 Gabriel was a happy enterprise developer until he found Scala and ruined his life. Now he wanders around mumbling strange words like "functors" and "curry-howard". In spite of claiming to live in Uruguay, he had a pretty nomadic life, having lived in many places across the Americas.
               </p>
             </div>
+
+          </div>
+          <div class="row text-center">
 
             <div class="col-md-4">
               <h3 id="evan-chan">Evan Chan</h3>
@@ -949,8 +686,6 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-          </div>
-          <div class="row text-center">
 
             <div class="col-md-4">
               <h3 id="jean-remi-desjardins">Jean-Rémi Desjardins
@@ -961,6 +696,8 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
+          </div>
+          <div class="row text-center">
 
             <div class="col-md-4">
               <h3 id="helena-edelson">Helena Edelson</h3>
@@ -970,7 +707,6 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-
             <div class="col-md-4">
               <h3 id="li-haoyi">Li Haoyi</h3>
               <hr>
@@ -978,15 +714,15 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-          </div>
-          <div class="row text-center">
-
             <div class="col-md-4">
               <h3 id="marconi-lanna">Marconi Lanna</h3>
               <hr>
               <p>Marconi has been writing software for fun and profit since last century, when the Internet was still black & white and silent. He loves computers, Internet, curly braces, angle brackets, Scala, and working with great people. Marconi is Senior Software Innovator at Originate and spends most of his free time trying to get his little daughter out of trouble. He has been programming in Scala since 2010.</p>
               </p>
             </div>
+
+          </div>
+          <div class="row text-center">
 
             <div class="col-md-4">
               <h3 id="brendan-mcadams">Brendan McAdams</h3>
@@ -1004,8 +740,6 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-
-
             <div class="col-md-4">
               <h3 id="erik-osheim">Erik Osheim</h3>
               <hr>
@@ -1013,6 +747,10 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
                 Erik is one of the creators of Spire, a Typelevel project designed to support fast, generic, and precise numerical programming in Scala. He is a contributor to the Scala compiler and standard library, and uses Scala to push the limits of JVM performance and expressiveness. Erik works at Meetup, where he collects, processes, and analyzes data to learn how to more effectively create community.
               </p>
             </div>
+
+          </div>
+          <div class="row text-center">
+
 
             <div class="col-md-4">
               <h3 id="jon-pretty">Jon Pretty</h3>
@@ -1031,15 +769,22 @@ Evan loves to design, build, and improve bleeding edge distributed data and back
               </p>
             </div>
 
-          </div>
-          <div class="row text-center">
-
-
             <div class="col-md-4">
               <h3 id="ryan-tanner">Ryan Tanner</h3>
               <hr>
               <p>
                 Ryan Tanner lives in Boulder, CO and is a full-stack developer at Conspire, working primarily with Scala, Akka, Play, ElasticSearch and Neo4j.  Conspire tells you exactly how to get the best introduction to whoever you want to meet — a customer, employer or investor.
+              </p>
+            </div>
+
+          </div>
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <h3 id="vlad-ureche">Vlad Ureche</h3>
+              <hr>
+              <p>
+                Vlad is a PhD student in the Scala Lab at EPFL, where he's working on optimizing high-level patterns in the Scala programming language down to fast JVM bytecode. His main project, miniboxing (scala-miniboxing.org), is aimed at compiling generic classes down to very efficient bytecode. Vlad also contributed to the Scala compiler in the areas of specialization, the JVM backend and on the scaladoc tool, where you may have seen the diagrams and the implicit member listings he developed.
               </p>
             </div>
 
