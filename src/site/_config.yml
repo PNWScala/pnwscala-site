@@ -1,0 +1,12 @@
+# Site settings
+title: PNWScala 2016
+email: info@pnwscala.org
+description: PNWScala 2016 - The Pacific Northwest's Scala Conference that you don't want to miss!
+baseurl: ""
+assets_basedir: "/2014"
+url: "http://pnwscala.org"
+twitter_username: PNWScala
+github_username:  PNWScala
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,34 @@
+- name: Avi Bryant
+  bio: Avi has led product, engineering, and data science teams at Etsy, Twitter and Dabble DB (which he co-founded and Twitter acquired). He’s known for his open source work on projects such as Seaside, Scalding, and Algebird. Avi currently works at Stripe.
+- name: Eddie Carlson
+  bio: Eddie has been building distributed search services in Scala for the last year and a half. He joined Whitepages two years ago, after graduating from the University of Washington. Whitepages had just begun to adopt Scala, and Eddie has worked to pioneer Scala usage at the company. He attended last year’s PNW Scala Conference.
+- name: Gabriel Claramunt
+  bio: Gabriel was a happy enterprise developer until he found Scala and ruined his life. Now he wanders around mumbling strange words like "functors" and "curry-howard". In spite of claiming to live in Uruguay, he had a pretty nomadic life, having lived in many places across the Americas.
+- name: Evan Chan
+  bio: Evan loves to design, build, and improve bleeding edge distributed data and backend systems using the latest in open source technologies. He has led the design and implementation of multiple big data platforms based on Storm, Spark, Kafka, Cassandra, and Scala/Akka, including a columnar real-time distributed query engine. He is an active contributor to the Apache Spark project and co-creator of the open-source Spark Job Server. He is a big believer in GitHub, open source, and meetups, and have given talks at various conferences including the Spark Summit and Cassandra Summit. He has Bachelor's and Master's degrees in Electrical Engineering from Stanford University.
+- name: Stephen Compall
+  bio: Stephen Compall, is one of the Scalaz devs, firmly in the typelevel camp, currently working with the Ermine group at McGraw Hill Financial. You can find a few of his writings about Scala on the typelevel blog.
+- name: Jean-Rémi Desjardins
+  bio: Jean-Rémi Desjardins just started at Whitepages a few months ago. He joins bringing a wealth of experience in Scala. Although he has only been involved in the Scala community for just over two years now, he has made contributions to important open source projects such as sbt, Play, shapeless, scalaz and Scala itself.
+- name: Helena Edelson
+  bio: Helena has been working with Scala since 2010 in R&D as a Senior Cloud Engineer at VMware and CrowdStrike, and has recently joined the DataStax (Cassandra) Analytics Engineering Team. She is an open source committer on Akka, Spark Cassandra Connector, Scala Cassandra Driver, (soon to be) Slick (adding Cassandra), & previous Spring Committer.
+- name: Li Haoyi
+  bio: Li Haoyi is a software engineer at Dropbox who writes Python/Coffeescript during the day and Scala/Scala.js at night.
+- name: Marconi Lanna
+  bio: Marconi has been writing software for fun and profit since last century, when the Internet was still black & white and silent. He loves computers, Internet, curly braces, angle brackets, Scala, and working with great people. Marconi is Senior Software Innovator at Originate and spends most of his free time trying to get his little daughter out of trouble. He has been programming in Scala since 2010.
+- name: Brendan McAdams
+  bio: Having recently returned from several wilderness years of being an itinerant conference speaker, trainer, & consultant for such fine companies as MongoDB & Typesafe, Brendan now writes Scala code for Netflix, building beautiful APIs with Scalatra & Swagger.
+- name: Marc Millstone
+  bio: Marc Millstone is a Lead Backend Engineer at Socrata, leading the Analytics and Machine Learning (AniML) team. Before joining Socrata, Marc spent two years in the Mathematical Sciences group at IBM Watson Research, as both a post-doc and Research Staff Member. He obtained his Ph.D. from the Courant Institute of Mathematical Sciences at New York University, where he worked jointly with Lawrence Berkeley National lab, specializing in methods for solving large-scale practical optimization problems.
+- name: Erik Osheim
+  bio: Erik is one of the creators of Spire, a Typelevel project designed to support fast, generic, and precise numerical programming in Scala. He is a contributor to the Scala compiler and standard library, and uses Scala to push the limits of JVM performance and expressiveness. Erik works at Meetup, where he collects, processes, and analyzes data to learn how to more effectively create community.
+- name: Jon Pretty
+  bio: Jon has been involved in the Scala community for the last ten years, having launched the first commercial and open-source Scala software back in 2005. Since then, he has successfully deployed Scala projects into small, medium and large businesses, and UK government, but is best known these days for his work on Rapture.
+- name: Mark Schaake
+  bio: Mark Schaake is a full-stack software engineer at the Allen Institute for Artificial Intelligence. He's been a software engineer since 2005. He's been full-time developing with Scala and Akka since 2011. He is passionate about Scala and Akka (and all things reactive). He enjoys building web services with Spray and web applications with AngularJS.
+- name: Ryan Tanner
+  bio: Ryan Tanner lives in Boulder, CO and is a full-stack developer at Conspire, working primarily with Scala, Akka, Play, ElasticSearch and Neo4j. Conspire tells you exactly how to get the best introduction to whoever you want to meet — a customer, employer or investor.
+- name: Vlad Ureche
+  bio: Vlad is a PhD student in the Scala Lab at EPFL, where he's working on optimizing high-level patterns in the Scala programming language down to fast JVM bytecode. His main project, miniboxing (scala-miniboxing.org), is aimed at compiling generic classes down to very efficient bytecode. Vlad also contributed to the Scala compiler in the areas of specialization, the JVM backend and on the scaladoc tool, where you may have seen the diagrams and the implicit member listings he developed.
+- name: Leif Wickland
+  bio: Leif Wickland writes Scala at Oracle in a quiet little corner that nobody has heard about. He lives in Bozeman, Montana, where he attempts to keep up with the neighbors by running, cycling, and skiing long distances on various surfaces. He's better at riding a bike uphill than downhill. He's getting better at skiing uphill. He still sucks at running at any pitch.

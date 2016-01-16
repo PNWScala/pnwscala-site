@@ -1,0 +1,38 @@
+    <div class="counter">
+      <div class="container">
+        <div class="row">
+          <!-- ///  digits  /// -->
+          <div class="col-md-8">
+            <div class="row" id="countdown" data-date="{{ site.data.2016.event.event_start }}">
+              <div class="col-md-3 count-digits wow fadeInDown" data-wow-delay="1s">
+                <p id="days">20</p>
+                <span class="lead">Days</span>
+              </div>
+              <div class="col-md-3 count-digits wow fadeInDown" data-wow-delay="1.2s">
+                <p id="hours">16</p>
+                <span class="lead">Hours</span>
+              </div>
+              <div class="col-md-3 count-digits wow fadeInDown" data-wow-delay="1.4s">
+                <p id="minutes">10</p>
+                <span class="lead">Minutes</span>
+              </div>
+              <div class="col-md-3 count-digits wow fadeInDown" data-wow-delay="1.6s">
+                <p id="seconds">10</p>
+                <span class="lead">Seconds</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 text-center wow fadeInUp" data-wow-delay="1.8s">
+            <h1>PNWScala {{ site.data.2016.event.event_year }}</h1>
+            <p class="lead">
+              PORTLAND, OREGON <br>
+              {{ site.data.2016.event.event_month_day }}, {{ site.data.2016.event.event_year }}
+            </p>
+            <ul class="list-inline join-us">
+                <li><a href="https://twitter.com/pnwscala" class="btn btn-empty-inverse btn-lg"><i class="fa fa fa-twitter"></i></a></li>
+                <li><a href="http://www.youtube.com/playlist?list=PLZzBLqtaWWlie50nc_WoGWSw5ZMTpr8pY" class="btn btn-empty-inverse btn-lg"><i class="fa fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>

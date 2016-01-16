@@ -1,0 +1,20 @@
+<div class="sponsors wow fadeInUp" id="sponsors">
+  <div class="container">
+    <div class="section-heading">
+      <h1>Sponsors</h1>
+      <p class="lead">PNWScala would not be possible without the help of our generous sponsors.</p>
+    </div>
+    <div class="row text-center">
+      {% for tier in site.data.2016.sponsors %}
+      <div class="col-lg-12">
+        <h2>{{ tier.title }}</h2>
+          <ul class="list-inline">
+          {% for company in tier.companies %}
+            <li><a href="{{ company.url }}"><img src="{{ company.logo_url }}" alt="{{ company.name }}" style="{{ company.logo_styling }}"></a></li>
+          {% endfor %}
+          </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
