@@ -1,0 +1,52 @@
+<div class="schedule" id="schedule">
+  <div class="container">
+    <div class="section-heading">
+      <h1>Schedule</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12 wow fadeInDown">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified">
+        {% for d in site.data.2016.schedule %}
+          <li {% if forloop.index == 1 %}class="active"{% endif %}><a href="#{{ d.day }}" data-toggle="tab">{{ d.day }}, {{ d.date }}</a></li>
+        {% endfor %}
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+        {% for date in site.data.2016.schedule %}
+          <div class="tab-pane {% if forloop.index == 1 %}active{% endif %}" id="{{ date.day }}">
+            <div class="panel-group" id="accordion">
+              {% for event in date.events %}
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    {% if event.speaker %}
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ date.day }}-{{ forloop.index }}">
+                        {{ event.time }} - {{ site.data.2016.talks | where: "speaker", event.speaker | map: "title" }}
+                      </a>
+                      -
+                    <a href="#{{ event.speaker | slugify }}">{{ event.speaker }}</a>
+                    {% else %}
+                      {{ event.time }} - {{ event.title }}
+                    {% endif %}
+                  </h4>
+                </div>
+                {% if event.speaker %}
+                <div id="collapse-{{ date.day }}-{{ forloop.index }}" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                      {{ site.data.2016.talks | where: "speaker", event.speaker | map: "description" }}
+                    </p>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

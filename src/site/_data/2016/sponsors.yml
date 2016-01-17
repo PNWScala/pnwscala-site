@@ -1,0 +1,37 @@
+- tier: 1
+  title: Platinum
+  companies:
+    - name: Socrata
+      url: "http://www.socrata.com"
+      logo_url: "../assets/img/socrata_logo_150px_wide.png"
+- tier: 2
+  title: Gold
+  companies:
+    - name: janrain
+      url: "http://janrain.com"
+      logo_url: "../assets/img/janrain_logo_header.png"
+- tier: 3
+  title: Silver
+  companies:
+    - name: Whitepages
+      url: "http://www.whitepages.com"
+      logo_url: "/assets/img/whitepages_new.png"
+      logo_styling: "-webkit-filter: invert(0.6);"
+    - name: 47 Degrees
+      url: "http://www.47deg.com/"
+      logo_url: "../assets/img/47-logo.png"
+      logo_styling: "width:60px;"
+    - name: BOLDRADIUS
+      url: "http://boldradius.com"
+      logo_url: "/assets/img/BoldRadius-logo.png"
+      logo_styling: "padding-bottom: 4px;"
+- tier: 4
+  title: Friend of PNWScala
+  companies:
+    - name: Typesafe
+      url: "http://www.typesafe.com"
+      logo_url: "../assets/img/typesafe.png"
+    - name: Geezeo
+      url: "http://www.geezeo.com/"
+      logo_url: "/assets/img/geezeo_logo.png"
+      logo_styling: "padding-bottom: 10px;"
