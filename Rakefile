@@ -6,12 +6,12 @@ task :deploy do
   system "s3cmd sync #{DIR}/src/site/ s3://pnwscala.org"
 end
 
-desc "Serve the website using a local Python server"
+desc "Serve the website using a local Jekyll server"
 task :serve do
   print "Serving the site from #{DIR}/src/site/\n"
   print "  use ctrl-C to stop\n"
   Dir.chdir("src/site") do
-    system "python -m SimpleHTTPServer"
+    system "jekyll serve"
   end
 end
 
