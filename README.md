@@ -1,6 +1,11 @@
 # PNWScala
 
-This is the code for the PNWScala website. It's just raw code, at the moment. We should probably use a static site generator at some point. One day....
+This is the code for the PNWScala website.
+
+## Install dependencies
+
+    ruby 2.x
+    gem install jekyll
 
 To preview the website, run `rake serve`. To deploy, run `rake deploy`.
 
